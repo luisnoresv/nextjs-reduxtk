@@ -11,25 +11,25 @@ const initialState = {
 
 export const fetchAllCharacters = createAsyncThunk(
 	'characters/fetchAllCharacters',
-	async (params = null, thunkApi) => {
+	async (params = null, { rejectWithValue }) => {
 		try {
 			const response = await BreakingBadService.fetchAllCharacters();
 			return response;
 		} catch (error) {
 			console.log('error', error);
-			return thunkApi.rejectWithValue(error);
+			return rejectWithValue(error);
 		}
 	}
 );
 
 export const fetchCharacterById = createAsyncThunk(
 	'characters/fetchCharacterById',
-	async (id, thunkApi) => {
+	async (id, { rejectWithValue }) => {
 		try {
 			const response = await BreakingBadService.fetchCharacterById(id);
 			return response;
 		} catch (error) {
-			return thunkApi.rejectWithValue(error);
+			return rejectWithValue(error);
 		}
 	}
 );
