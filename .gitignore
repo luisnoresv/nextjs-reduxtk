@@ -33,5 +33,7 @@ yarn-error.log*
 # vercel
 .vercel
 .vscode
+
+# local
 .env
 *.code-workspace
