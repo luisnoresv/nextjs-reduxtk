@@ -33,13 +33,12 @@ function SWRPage() {
 			</div>
 			<div className={styles.row}>
 				<h2 className={styles.description}>
-					The information is handle with RTK Query to show the automatic
-					catching
+					The information is handle with SWR
 				</h2>
 			</div>
 			<div className={styles.row} style={{ textAlign: 'center' }}>
 				<h4>
-					<code className={styles.code}>pages/breakingBad/index.js</code>
+					<code className={styles.code}>pages/swr/index.js</code>
 				</h4>
 				<Link href='/'>
 					<a style={{ fontSize: '2rem' }} className='App-link'>
